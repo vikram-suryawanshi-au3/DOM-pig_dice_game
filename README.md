@@ -11,3 +11,7 @@
 * The first player to reach 100 points on GLOBAL score wins the game
 
 
+## Demo
+you can check here
+
+(https://vikram-pig-game.herokuapp.com/)
