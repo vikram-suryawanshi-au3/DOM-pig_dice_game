@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+}
+
+.dice {
+    position: absolute;
+    /* left: 50%; */
+    top: 178px;
+    left: 45px;
+     /* transform: translateX(-50%);  */
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.player-1-panel, .player-0-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnss{
+    text-align: center;
+}
+
+.btn-hold, .btn-roll{
+    position: relative;
+    top: 400px;
+}
+
+.btn-roll{
+    position: relative;
+    top: 480px;
+}
+
+.btn-outline-info{
+    position: absolute;
+    right: 10px;
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
