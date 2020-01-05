@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- BOOTSTRAP -->
+
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
+        <title>Document</title>
+        <link type="text/css" rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+
+        <!-- BUTTONS - START NEW GAME , RULES -->
+
+        <div class="btnss">
+            <button type="button" class="btn btn-primary btn-lg mt-1 btn-new">Click
+                here to start new game</button>
+            <br/>
+                <a tabindex="0"
+                    class="btn btn-lg btn-outline-info rules"
+                    role="button"
+                    data-html="true"
+                    data-toggle="popover"
+                    data-trigger="focus"
+
+                    title="<b>Rules</b>"
+                data-content="<ul><li>Active player roll a die and scores as
+                        many points as the total shown in 'CURRENT' providing
+                        the die doesn’t roll a 1. The player may continue
+                        rolling and accumulating points (but risk rolling a 1)
+                        or end his turn.</li>
+                    <li>If the player rolls a 1 his turn is over, he loses all
+                        points he accumulated that turn i.e. in 'CURRENT', and
+                        he passes the die to the next player.</li>
+                    <li>Play 'HOLD' from player to player until a winner is
+                        determined.</li>
+                    <li>The first player to accumulate 100 or more points wins
+                        the game.</li>
+                </ul>">Rules</a>
+        </div>
+
+
+        <div class="container mt-5">
+            <div class="row">
+
+                <!-- PLAYER-1 -->
+
+                <div class="col-5">
+                    <div class="card player-0-panel active">
+                        <div class="player-name display-1" id="name-0">Player 1</div>
+                        <div class="player-score display-3" id="score-0">11</div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="player-current-box">
+                                    <div class="player-current-label
+                                        display-4">Current</div>
+                                    <div class="player-current-score
+                                        display-3" style="text-align:
+                                        center" id="current-0">7</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DICE & BUTTONS - ROLL DICE , HOLD -->
+
+                <div class="col-2 btnss">
+                    <button class="btn-roll btn
+                        btn-outline-success"><i
+                            class="ion-ios-loop"></i>Roll
+                        dice</button>
+                    <br/>
+                    <button class="btn-hold btn
+                            btn-outline-danger"><i
+                                class="ion-ios-download-outline"></i>Hold</button>
+                    <img src="Dice-2.png" alt="Dice"
+                            class="dice">
+                </div>
+
+                <!-- PLAYER-2 -->
+
+                <div class="col-5">
+                    <div class="card player-1-panel">
+                        <div class="player-name display-1"
+                            id="name-1">Player 2</div>
+                        <div class="player-score display-3"
+                            id="score-1">22</div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div
+                            class="player-current-box">
+                            <div
+                                class="player-current-label
+                                display-4">Current</div>
+                            <div
+                                class="player-current-score
+                                display-3"
+                                style="text-align:
+                                center"
+                                id="current-1">9</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SCRIPTS -->
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+            $('[data-toggle="popover"]').popover()
+            })
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
